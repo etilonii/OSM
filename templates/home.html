@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Squadre e Giocatori</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Gestisci Squadre e Giocatori</h1>
+    <form method="POST" action="/">
+        <div class="form-group">
+            <label for="team_name">Inserisci squadra:</label>
+            <input type="text" id="team_name" name="team_name" required>
+            <input type="hidden" name="action" value="add_team">
+        </div>
+        <button type="submit">Aggiungi Squadra</button>
+    </form>
+    <form method="POST" action="/">
+        <div class="form-group">
+            <label for="player_name">Inserisci giocatore:</label>
+            <input type="text" id="player_name" name="player_name" required>
+            <input type="hidden" name="action" value="add_player">
+        </div>
+        <button type="submit">Aggiungi Giocatore</button>
+    </form>
+    <div class="centered-button">
+        <a href="/draw">Sorteggia!</a>
+    </div>
+    <h2>Elenco Squadre</h2>
+    <ul id="team_list">
+        {% for team in teams %}
+        <li>
+            <span>{{ team }}</span>
+            <button onclick="editItem(this, '{{ team }}', 'team')">Modifica</button>
+            <button onclick="deleteItem(this, '{{ team }}', 'team')">Elimina</button>
+        </li>
+        {% endfor %}
+    </ul>
+    <h2>Elenco Giocatori</h2>
+    <ul id="player_list">
+        {% for player in players %}
+        <li>
+            <span>{{ player }}</span>
+            <button onclick="editItem(this, '{{ player }}', 'player')">Modifica</button>
+            <button onclick="deleteItem(this, '{{ player }}', 'player')">Elimina</button>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

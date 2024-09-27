@@ -1,0 +1,135 @@
+/* Stili di base per la pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stilizzazione del titolo principale */
+h1 {
+    text-align: center;
+    color: #0056b3;
+}
+
+h2 {
+    text-align: center;
+    color: #02475e;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Stilizzazione dei form e degli input */
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin: 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: bold; /* Rendi le etichette in grassetto per una migliore leggibilità */
+    white-space: nowrap; /* Impedisce alle etichette di andare a capo */
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button, a {
+    width: 200px;
+    margin: 10px 0; /* Aggiunge spazio sopra e sotto ogni elemento */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Stilizzazione delle liste */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    min-width: 200px;
+    text-align: center;
+}
+
+li {
+    background-color: #ddd;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+li button {
+    margin-left: 10px;
+}
+
+/* Link per sorteggiare e tornare alla home */
+a {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #004494;
+}
